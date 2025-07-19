@@ -1,0 +1,10 @@
+.product-image {
+  max-width: 550px;
+  height: auto;
+}
+.product-card {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 16px;
+  width: 300px;
+}

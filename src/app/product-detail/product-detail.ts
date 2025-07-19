@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-product-list',
-  imports: [CommonModule, FormsModule],
-  templateUrl: './product-list.html',
-  styleUrl: './product-list.css',
+  selector: 'app-product-detail',
+  imports: [CommonModule],
+  templateUrl: './product-detail.html',
+  styleUrl: './product-detail.css'
 })
-export class ProductList {
-  products = [
+export class ProductDetail {
+  product = [
     {
       id: 1,
       name: 'Dây chuyền bạc nữ đính đá CZ cá tiên YU_831944',
@@ -40,15 +39,7 @@ export class ProductList {
       price: 1266000,
       image:
         '/image/lactay/Lac-tay-bac-nu-ca-tinh-mat-xich-vuong-trai-tim-Strong-Heart-LILI_414788_1 (1).jpg',
-      inStock: false,
+      inStock: true,
     }
-  ];
-
-  filterText = '';
-
-  filterProducts() {
-    return this.products.filter((product) =>
-      product.name.toLowerCase().includes(this.filterText.toLowerCase())
-    );
-  }
+  ]
 }
